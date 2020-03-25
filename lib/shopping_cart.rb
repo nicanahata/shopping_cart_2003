@@ -7,11 +7,11 @@ class ShoppingCart
     @products = []
   end
 
-  # def add_product(product)
-  #   @products << product
-  # end
-  #
-  # def total_products
-  # end
+  def add_product(product)
+    @products << product
+  end
+
+  def total_products
+  end
 
 end

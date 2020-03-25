@@ -16,6 +16,11 @@ class ShoppingCartTest < Minitest::Test
     assert_equal 30, cart.capacity
   end
 
+  def test_cart_starts_with_zero_products
+    cart = ShoppingCart.new("King Soopers", "30items")
+    assert_equal [], cart.products
+  end
+
   # def test_it_can_add_products
   #   product1 = Product.new(:paper, 'toilet paper', 3.70, '10')
   #   product2 = Product.new(:meat, 'chicken', 4.50, '2')

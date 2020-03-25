@@ -11,7 +11,5 @@ class ShoppingCart
     @products << product
   end
 
-  def total_products
-  end
 
 end

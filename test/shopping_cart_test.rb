@@ -29,5 +29,5 @@ class ShoppingCartTest < Minitest::Test
     cart.add_product(product2)
     assert_equal [product1, product2], cart.products
   end
-
+  
 end

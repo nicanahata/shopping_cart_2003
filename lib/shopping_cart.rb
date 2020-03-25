@@ -3,8 +3,15 @@ class ShoppingCart
 
   def initialize(name, capacity)
     @name = name
-    @capacity = capacity
+    @capacity = capacity.to_f
     @products = []
   end
+
+  # def add_product(product)
+  #   @products << product
+  # end
+  #
+  # def total_products
+  # end
 
 end

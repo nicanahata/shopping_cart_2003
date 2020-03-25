@@ -3,7 +3,7 @@ class ShoppingCart
 
   def initialize(name, capacity)
     @name = name
-    @capacity = capacity.to_f
+    @capacity = capacity.to_i
     @products = []
   end
 
@@ -11,5 +11,14 @@ class ShoppingCart
     @products << product
   end
 
+  def total_number_of_products
+    @products.count.to_i * @quantity.to_i
+  end
+
+  # def is_full?
+  # end
+
+  # def products_by_category
+  # end
 
 end

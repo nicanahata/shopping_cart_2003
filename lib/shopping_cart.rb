@@ -12,7 +12,7 @@ class ShoppingCart
   end
 
   def total_number_of_products
-    @products.count.to_i * @quantity.to_i
+    products.count.to_i * @quantity.to_i 
   end
 
   # def is_full?

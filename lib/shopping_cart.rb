@@ -21,7 +21,18 @@ class ShoppingCart
     total_number_of_products > @capacity
   end
 
-  # def products_by_category
-  # end
+  def products_by_category(category)
+    found_products = []
+    @products.each do |product|
+      if product.category == category
+        found_products << product
+      end
+    end
+    found_products
+  end
+
+  def details
+    { :name => @name, :capacity => @capacity}
+  end
 
 end

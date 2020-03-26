@@ -57,14 +57,22 @@ class ShoppingCartTest < Minitest::Test
     assert_equal true, cart.is_full?
   end
 
-  # def test_it_has_products_by_category
-  #   cart = ShoppingCart.new("King Soopers", "30items")
-  #   product1 = Product.new(:paper, 'toilet paper', 3.70, '10')
-  #   product2 = Product.new(:meat, 'chicken', 4.50, '2')
-  #   product3 = Product.new(:paper, 'tissue paper', 1.25, '1')
-  #   product4 = Product.new(:produce, 'apples', 0.99, '20')
+  def test_it_has_products_by_category
+    cart = ShoppingCart.new("King Soopers", "30items")
+    product1 = Product.new(:paper, 'toilet paper', 3.70, '10')
+    product2 = Product.new(:meat, 'chicken', 4.50, '2')
+    product3 = Product.new(:paper, 'tissue paper', 1.25, '1')
+    product4 = Product.new(:produce, 'apples', 0.99, '20')
 
-  #   assert_equal [] , cart.products_by_category(:paper)
-  # end
+    assert_equal [product1, product3] , cart.products_by_category(:paper)
+    assert_equal [product2] , cart.products_by_category(:meat)
+  end
+
+  def test_it_has_cart_details
+    cart = ShoppingCart.new("King Soopers", "30items")
+
+    assert_equal ({:name=> "King Soopers", :capacity=> 30}), cart.details
+
+  end
 
 end

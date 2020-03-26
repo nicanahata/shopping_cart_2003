@@ -12,11 +12,14 @@ class ShoppingCart
   end
 
   def total_number_of_products
-    products.count.to_i * @quantity.to_i 
+    product_total = 0
+    products.each {|product| product_total += product.quantity.to_i }
+    product_total
   end
 
-  # def is_full?
-  # end
+  def is_full?
+    total_number_of_products > @capacity
+  end
 
   # def products_by_category
   # end
